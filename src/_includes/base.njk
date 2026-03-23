@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} | OHBM-OSSIG Reproducibility Challenge</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="{{ '/' | url }}">
+          <img src="https://ossig.netlify.app/images/logos/ossig_logo.svg" alt="OHBM OSSIG logo" />
+          <span>OHBM Reproducibility Challenge</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="{{ '/' | url }}" {% if activeTab == 'about' %}aria-current="page"{% endif %}>About</a>
+          <a href="{{ '/source-projects/' | url }}" {% if activeTab == 'source-projects' %}aria-current="page"{% endif %}>Source Projects</a>
+          <a href="{{ '/contact/' | url }}" {% if activeTab == 'contact' %}aria-current="page"{% endif %}>Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+      {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 OHBM Open Science SIG</p>
+        <div class="footer-links">
+          <a href="https://ossig.netlify.app/" target="_blank" rel="noopener noreferrer">OSSIG Website</a>
+          <a href="https://github.com/KMarshallX/ossig" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function() {
+        const menuButton = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('#site-nav');
+
+        if (!menuButton || !nav) {
+          return;
+        }
+
+        menuButton.addEventListener('click', function() {
+          const isOpen = nav.classList.toggle('is-open');
+          menuButton.setAttribute('aria-expanded', String(isOpen));
+          document.body.classList.toggle('menu-open', isOpen);
+        });
+
+        nav.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            nav.classList.remove('is-open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-open');
+          });
+        });
+
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 800) {
+            nav.classList.remove('is-open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-open');
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

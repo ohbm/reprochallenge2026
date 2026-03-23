@@ -1,0 +1,27 @@
+---
+title: Source Projects
+layout: base.njk
+activeTab: source-projects
+---
+<section class="page-header container">
+  <h1>Source Projects</h1>
+  <p>Browse active source-party submissions for the OHBM Reproducibility Challenge.</p>
+</section>
+
+<section class="container card source-projects-card" aria-live="polite">
+  <div id="projects-loading" class="projects-state">
+    <div class="spinner" aria-hidden="true"></div>
+    <p>Loading source projects from GitHub...</p>
+  </div>
+
+  <div id="projects-error" class="projects-state hidden" role="alert"></div>
+  <div id="projects-empty" class="projects-state hidden">No source projects submitted yet.</div>
+
+  <div id="projects-list" class="projects-grid hidden"></div>
+
+  <p class="projects-note">
+    Projects are loaded live from GitHub. Click any project to view its full submission.
+  </p>
+</section>
+
+<script src="{{ '/assets/js/source-projects.js' | url }}" defer></script>
