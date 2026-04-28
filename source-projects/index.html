@@ -37,12 +37,28 @@
     </header>
 
     <main id="main-content" class="site-main">
-      <section class="page-header container">
+      <section class="page-header container projects-header">
+  <p class="eyebrow eyebrow-light">Live GitHub submissions</p>
   <h1>Source Projects</h1>
-  <p>Browse active source-party submissions for the OHBM Reproducibility Challenge.</p>
+  <p>Browse active source-party submissions for the OHBM Reproducibility Challenge. Each project links to its full GitHub issue record.</p>
 </section>
 
-<section class="container card source-projects-card" aria-live="polite">
+<section class="container source-projects-card" aria-live="polite" aria-labelledby="projects-list-title">
+  <div class="source-projects-toolbar">
+    <div>
+      <h2 id="projects-list-title">Available source work</h2>
+      <p>Loaded from the OSSIG GitHub repository using the challenge label.</p>
+    </div>
+    <a
+      class="cta cta-small"
+      href="https://github.com/KMarshallX/ossig/issues/new?template=reproducibility_challenge.yml"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Submit a Project
+    </a>
+  </div>
+
   <div id="projects-loading" class="projects-state">
     <div class="spinner" aria-hidden="true"></div>
     <p>Loading source projects from GitHub...</p>
@@ -54,7 +70,7 @@
   <div id="projects-list" class="projects-grid hidden"></div>
 
   <p class="projects-note">
-    Projects are loaded live from GitHub. Click any project to view its full submission.
+    Project cards open in a new tab so the complete submission remains visible on GitHub.
   </p>
 </section>
 
