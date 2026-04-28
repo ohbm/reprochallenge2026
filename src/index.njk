@@ -9,14 +9,17 @@ activeTab: about
       <p class="eyebrow">OHBM Open Science SIG</p>
       <h1 id="hero-title">The OHBM Reproducibility Challenge</h1>
       <p class="tagline">A collaborative challenge connecting source and reproducing teams to strengthen transparent neuroimaging science.</p>
-      <a
-        class="cta cta-large"
-        href="https://github.com/KMarshallX/ossig/issues/new?template=reproducibility_challenge.yml"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Sign Up for the Challenge
-      </a>
+      <div class="hero-actions" aria-label="Challenge actions">
+        <a
+          class="cta cta-large"
+          href="https://github.com/KMarshallX/ossig/issues/new?template=reproducibility_challenge.yml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sign Up for the Challenge
+        </a>
+        <a class="cta-secondary" href="{{ '/source-projects/' | url }}">View Source Projects</a>
+      </div>
     </div>
     <img
       class="hero-logo"
@@ -26,76 +29,156 @@ activeTab: about
   </div>
 </section>
 
-<section class="content-section container card" aria-labelledby="overview-title">
-  <h2 id="overview-title">Overview</h2>
-  <p>
-    The OHBM-OSSIG Reproducibility Challenge is a networking experience facilitated by the Open Science SIG, aiming at improving the reproducibility of scientific results. Participants join forces in teams of two parties, a "source party" and a "reproducing party". The source party provides a submitted OHBM abstract ("source work") for reproduction, as well as access to procedures, codes, and, when possible, the data.
+<section class="content-section container intro-panel" aria-labelledby="overview-title">
+  <div class="section-kicker">Overview</div>
+  <div class="intro-grid">
+    <div>
+      <h2 id="overview-title">A structured path for testing scientific results</h2>
+      <p>
+        The OHBM-OSSIG Reproducibility Challenge is a networking experience facilitated by the Open Science SIG, aiming at improving the reproducibility of scientific results.
+      </p>
+    </div>
+    <div class="intro-summary">
+      <p>
+        Participants join forces in teams of two parties: a source party and a reproducing party. The source party provides a submitted OHBM abstract, procedures, code, and data when possible. The reproducing party independently re-runs or extends the analysis.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content-section section-band" aria-labelledby="roles-title">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-kicker">Team model</div>
+      <h2 id="roles-title">Two roles, one transparent workflow</h2>
+    </div>
+
+    <div class="role-grid">
+      <article class="role-card">
+        <p class="role-label">Source party</p>
+        <h3>Share the original work</h3>
+        <p>Submit author and contact details, documentation, code, data descriptions, data links where available, data sharing possibilities, and links to the related abstract, preprint, or paper.</p>
+      </article>
+
+      <article class="role-card">
+        <p class="role-label">Reproducing party</p>
+        <h3>Run the independent attempt</h3>
+        <p>Register expertise and interests so OSSIG can support team formation. Teams do not need to arrive pre-formed.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="content-section container" aria-labelledby="types-title">
+  <div class="section-heading">
+    <div class="section-kicker">Challenge scope</div>
+    <h2 id="types-title">Types of reproduction</h2>
+    <p>The specific type of reproduction is determined by the availability of the original data.</p>
+  </div>
+
+  <div class="type-grid">
+    <article class="type-card">
+      <h3>Reproducibility</h3>
+      <img
+        class="type-illustration"
+        src="{{ '/assets/images/reproducible-definition-turing-way_OSSIG.png' | url }}"
+        alt="Illustration showing reproducibility as the same data and same analysis"
+      />
+      <p>Running the same analysis on the same data.</p>
+    </article>
+    <article class="type-card">
+      <h3>Replicability</h3>
+      <img
+        class="type-illustration"
+        src="{{ '/assets/images/replicable-definition-turing-way_OSSIG.png' | url }}"
+        alt="Illustration showing replicability as different data and same analysis"
+      />
+      <p>Running the same analysis on independent data.</p>
+    </article>
+  </div>
+
+  <p class="illustration-credit">
+    Adapted from The Turing Way Community. Original illustration created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807
   </p>
-  <p>
-    To be eligible, the source work must be submitted as an abstract to OHBM 2026; related publications can be used only if they directly correspond to this submitted abstract. The reproducing party reproduces the original work using the available procedures, code, and data.
-  </p>
-  <p>
-    Teams may hold one brief introduction meeting to clarify scope and logistics, but no further consultation with the source party is allowed.
+
+</section>
+
+<section class="content-section section-band" aria-labelledby="participate-title">
+  <div class="container participate-layout">
+    <div>
+      <div class="section-kicker">How to participate</div>
+      <h2 id="participate-title">Register through the OSSIG GitHub template</h2>
+      <p>
+        Both source and reproducing parties register by opening an issue on the OSSIG GitHub page and selecting their role in the template.
+      </p>
+    </div>
+
+    <div class="steps-list" aria-label="Participation steps">
+      <div class="step-item">
+        <span>1</span>
+        <p>Submit an OHBM 2026 abstract or register your reproduction expertise.</p>
+      </div>
+      <div class="step-item">
+        <span>2</span>
+        <p>OSSIG supports team formation based on expertise and interests.</p>
+      </div>
+      <div class="step-item">
+        <span>3</span>
+        <p>Teams may hold one brief introduction meeting to clarify scope and logistics.</p>
+      </div>
+    </div>
+
+    <a
+      class="cta cta-small"
+      href="https://github.com/KMarshallX/ossig/issues/new?template=reproducibility_challenge.yml"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Sign Up for the Challenge
+    </a>
+  </div>
+</section>
+
+<section class="content-section container" aria-labelledby="timeline-title">
+  <div class="section-heading">
+    <div class="section-kicker">Timeline</div>
+    <h2 id="timeline-title">From OHBM 2026 submissions to OHBM 2027 outcomes</h2>
+  </div>
+
+  <ol class="timeline-list">
+    <li>
+      <span>OHBM 2026</span>
+      <p>Teams are formed and confirmed during or shortly after the meeting.</p>
+    </li>
+    <li>
+      <span>Reproduction period</span>
+      <p>Established teams reproduce or replicate the source work using available procedures, code, and data.</p>
+    </li>
+    <li>
+      <span>OHBM 2027</span>
+      <p>Teams are invited to collaboratively submit an abstract describing results to both the OHBM abstract portal and OSSIG.</p>
+    </li>
+    <li>
+      <span>Showcase</span>
+      <p>OSSIG hosts a dedicated session to present teams and reflect on what was learned.</p>
+    </li>
+  </ol>
+
+  <p class="callout-note">
+    Outcomes are evaluated based on how closely replication matches the original work, the transparency and openness of the source work, and additional outputs such as software or publications. Unsuccessful attempts do not reflect negatively; learning through the process is the main outcome.
   </p>
 </section>
 
-<section class="content-section container card" aria-labelledby="types-title">
-  <h2 id="types-title">Types of Reproduction</h2>
-  <p>In this challenge, we distinguish between two complementary types of reproduction:</p>
-  <ul>
-    <li><strong>Reproducibility:</strong> running the same analysis on the same data</li>
-    <li><strong>Replicability:</strong> running the same analysis on independent data</li>
-  </ul>
-  <p>
-    The specific type of reproduction will be determined by the availability of the original data. In all cases, a mandatory requirement is that teams make their code openly available to enable others to re-run the analysis.
-  </p>
-</section>
-
-<section class="content-section container card" aria-labelledby="participate-title">
-  <h2 id="participate-title">How to Participate</h2>
-  <p>
-    To join the OHBM Reproducibility Challenge, both source and reproducing parties register by opening an issue on the OSSIG GitHub page and selecting their role in the template. Source parties are asked to submit: author names and contact details, links to SOP/documentation and code, data description (and data links where available), data sharing possibilities, and links to the abstract, preprint, or paper.
-  </p>
-  <p>
-    Reproducing parties register their interest and expertise. The OSSIG supports team formation by matching source and reproducing parties based on expertise and interest, so participants do not need to arrive with a pre-formed team.
-  </p>
-  <p>
-    Submitted abstracts are listed on the dedicated GitHub page, and additional abstracts may still join after initial submission if authors provide permission and complete the same issue-based process.
-  </p>
-  <a
-    class="cta cta-small"
-    href="https://github.com/KMarshallX/ossig/issues/new?template=reproducibility_challenge.yml"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Sign Up for the Challenge
-  </a>
-</section>
-
-<section class="content-section container card" aria-labelledby="timeline-title">
-  <h2 id="timeline-title">Timeline</h2>
-  <p>
-    Teams are formed and confirmed during or shortly after the OHBM 2026 meeting. Once teams are established, they begin reproducing or replicating the source work and are invited to collaboratively submit an abstract describing their results for OHBM 2027. This abstract is submitted both to the OHBM abstract portal and to OSSIG.
-  </p>
-  <p>
-    The OSSIG hosts a dedicated session during OHBM 2027 to showcase participating teams and reflect on challenges encountered in reproducing and replicating the original work.
-  </p>
-  <p>
-    Outcomes are evaluated based on how closely replication matches the original work, the transparency and openness of the source work, and additional outputs such as software or publications.
-  </p>
-  <p>
-    Importantly, "unsuccessful" attempts do not reflect negatively; learning through the reproduction process is the main outcome.
-  </p>
-</section>
-
-<section class="content-section container card" aria-labelledby="background-title">
-  <h2 id="background-title">Background</h2>
-  <p>
-    This challenge is inspired by the Reproducible Research Study Group (RRSG) of ISMRM. Learn more in the related RRSG publication and on the original challenge website.
-  </p>
-  <p>
+<section class="content-section container resource-panel" aria-labelledby="background-title">
+  <div>
+    <div class="section-kicker">Background</div>
+    <h2 id="background-title">Inspired by prior reproducible research efforts</h2>
+    <p>
+      This challenge is inspired by the Reproducible Research Study Group of ISMRM.
+    </p>
+  </div>
+  <div class="resource-links" aria-label="Related resources">
     <a href="https://onlinelibrary.wiley.com/doi/10.1002/mrm.28391" target="_blank" rel="noopener noreferrer">Read the related publication</a>
-    and
-    <a href="https://challenge.ismrm.org/" target="_blank" rel="noopener noreferrer">visit the original challenge website</a>.
-  </p>
+    <a href="https://challenge.ismrm.org/" target="_blank" rel="noopener noreferrer">Visit the original challenge website</a>
+  </div>
 </section>
