@@ -6,7 +6,6 @@ module.exports = function(eleventyConfig) {
       input: "src",
       output: "_site"
     },
-    // Change to "/repo-name/" if deploying under a sub-path
-    pathPrefix: "/ReproChallenge2026-test/"
+    pathPrefix: "/reprochallenge2026/"
   };
 };
