@@ -31,3 +31,7 @@ https://github.com/ohbm/reprochallenge2026
 ## Website
 
 https://ohbm.github.io/reprochallenge2026/
+
+## More Info
+
+[OSSIG Website](https://ossig.netlify.app/challenge/)
