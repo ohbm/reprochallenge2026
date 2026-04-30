@@ -1,4 +1,4 @@
-const GITHUB_REPO = "KMarshallX/ossig";
+const GITHUB_REPO = "ohbm/ossig";
 const SOURCE_LABEL = "Repro Challenge 2026";
 
 function parseIssueField(body, fieldName) {
