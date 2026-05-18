@@ -33,7 +33,7 @@ activeTab: about
   <div class="section-kicker">Overview</div>
   <div class="intro-grid">
     <div>
-      <h2 id="overview-title">A structured path for testing scientific results</h2>
+      <h2 id="overview-title">How this challenge work</h2>
       <p>
         The OHBM-OSSIG Reproducibility Challenge is a networking experience facilitated by the Open Science SIG, aiming at improving the reproducibility of scientific results.
       </p>
@@ -62,10 +62,16 @@ activeTab: about
 
       <article class="role-card">
         <p class="role-label">Reproducing party</p>
-        <h3>Run the independent attempt</h3>
-        <p>Register expertise and interests so OSSIG can support team formation. Teams do not need to arrive pre-formed.</p>
+        <h3>Work through someone else's science</h3>
+        <p>Register your expertise and interests, then either pick a source party or get matched by OSSIG at the Open Science Room. Once paired, you independently work through their documentation, code, and available data to reproduce their work.</p>
       </article>
     </div>
+
+    <article class="role-card expected-outcomes-card">
+      <p class="role-label">Expected outcomes</p>
+      <h3>Present your findings at OHBM 2027</h3>
+      <p>Once the reproduction is complete, teams jointly submit an abstract to OHBM 2027 and are invited to present in the Open Science Room. The effort is evaluated on how closely results matched, the openness of the source work, and any additional outputs. Reproducibility is hard, and well-documented attempts are valued regardless of the outcome.</p>
+    </article>
   </div>
 </section>
 
@@ -139,34 +145,95 @@ activeTab: about
   </div>
 </section>
 
+<section class="content-section container" aria-labelledby="conference-title">
+  <div class="section-heading">
+    <div class="section-kicker">OHBM 2026</div>
+    <h2 id="conference-title">Before and during the OHBM 2026</h2>
+  </div>
+
+  <div class="conference-grid">
+    <article class="conference-card">
+      <h3>Before the conference</h3>
+      <p>
+        Source parties complete their submission details (<strong>deadline June 14th</strong>). They are also invited to add a Reproducibility Challenge logo with a
+        <a class="qr-preview-link" href="{{ '/assets/images/reproducibility_qr_ossig.png' | url }}" onclick="event.preventDefault();">
+          QR code
+          <span class="qr-preview-popup" aria-hidden="true">
+            <img src="{{ '/assets/images/reproducibility_qr_ossig.png' | url }}" alt="" />
+          </span>
+        </a>
+        to their poster, linking to the challenge website.
+      </p>
+    </article>
+
+    <article class="conference-card">
+      <h3>During the poster sessions</h3>
+      <p>
+        This signals to potential reproducing parties that the work is available for reproduction. Interested participants can scan the
+        <a class="qr-preview-link" href="{{ '/assets/images/reproducibility_qr_ossig.png' | url }}" onclick="event.preventDefault();">
+          QR code
+          <span class="qr-preview-popup" aria-hidden="true">
+            <img src="{{ '/assets/images/reproducibility_qr_ossig.png' | url }}" alt="" />
+          </span>
+        </a>
+        to visit the challenge website and register. Team formation can take place during the poster sessions, the dedicated Open Science Room session, or at any other point during the conference.
+      </p>
+    </article>
+  </div>
+</section>
+
 <section class="content-section container" aria-labelledby="timeline-title">
   <div class="section-heading">
     <div class="section-kicker">Timeline</div>
     <h2 id="timeline-title">From OHBM 2026 submissions to OHBM 2027 outcomes</h2>
   </div>
 
-  <ol class="timeline-list">
-    <li>
-      <span>OHBM 2026</span>
-      <p>Teams are formed and confirmed during or shortly after the meeting.</p>
-    </li>
-    <li>
-      <span>Reproduction period</span>
-      <p>Established teams reproduce or replicate the source work using available procedures, code, and data.</p>
-    </li>
-    <li>
-      <span>OHBM 2027</span>
-      <p>Teams are invited to collaboratively submit an abstract describing results to both the OHBM abstract portal and OSSIG.</p>
-    </li>
-    <li>
-      <span>Showcase</span>
-      <p>OSSIG hosts a dedicated session to present teams and reflect on what was learned.</p>
-    </li>
-  </ol>
+  <div class="timeline-visual">
+    <img
+      class="timeline-illustration"
+      src="{{ '/assets/images/reproducible_challenge_OSSIG_Timeline.png' | url }}"
+      alt="OHBM Reproducibility Challenge timeline"
+    />
+    <button class="timeline-dot" style="--dot-x: 37.6%; --dot-y: 47.8%;" type="button" aria-label="OHBM 2026, June 14 to 18 2026">
+      <span class="timeline-popup" role="tooltip">
+        <strong>OHBM 2026</strong>
+        <span>Teams are formed and confirmed during or shortly after the meeting.</span>
+      </span>
+    </button>
+    <button class="timeline-dot timeline-dot-large" style="--dot-x: 53.7%; --dot-y: 53.6%;" type="button" aria-label="Reproduction phase">
+      <span class="timeline-popup" role="tooltip">
+        <strong>Reproduction phase</strong>
+        <span>Once teams are established, the reproducing party works through the source work using the available procedures, code, and data. Teams may hold one brief introduction meeting to clarify scope and logistics, but no further consultation with the source party is allowed.</span>
+      </span>
+    </button>
+    <button class="timeline-dot" style="--dot-x: 67.7%; --dot-y: 47.8%;" type="button" aria-label="OHBM abstract deadline, December 2026">
+      <span class="timeline-popup" role="tooltip">
+        <strong>Abstract deadline for OHBM 2027</strong>
+        <span>Teams are invited to collaboratively submit an abstract describing results to both the OHBM abstract portal and OSSIG.</span>
+      </span>
+    </button>
+    <button class="timeline-dot" style="--dot-x: 85.5%; --dot-y: 47.8%;" type="button" aria-label="OHBM 2027">
+      <span class="timeline-popup timeline-popup-left" role="tooltip">
+        <strong>OHBM 2027 Open Science Room</strong>
+        <span>OSSIG will host a dedicated session during Open Science Room to present teams and reflect on what was learned.</span>
+      </span>
+    </button>
+  </div>
 
-  <p class="callout-note">
-    Outcomes are evaluated based on how closely replication matches the original work, the transparency and openness of the source work, and additional outputs such as software or publications. Unsuccessful attempts do not reflect negatively; learning through the process is the main outcome.
-  </p>
+  <div class="evaluation-chat" aria-label="Evaluation notes">
+    <div class="evaluation-chat-row evaluation-chat-row-left">
+      <img src="{{ '/assets/images/chat-line-svgrepo-com.svg' | url }}" alt="" />
+      <p>How are the results evaluated...?</p>
+    </div>
+    <div class="evaluation-chat-row evaluation-chat-row-right">
+      <p>Outcomes are evaluated based on how closely replication matches the original work, the transparency and openness of the source work, and additional outputs such as software or publications.</p>
+      <img src="{{ '/assets/images/chat-line-svgrepo-com.svg' | url }}" alt="" />
+    </div>
+    <div class="evaluation-chat-row evaluation-chat-row-right">
+      <p>Importantly, "unsuccessful" attempts do not reflect negatively; learning through the reproduction process is the main outcome :)</p>
+      <img src="{{ '/assets/images/chat-line-svgrepo-com.svg' | url }}" alt="" />
+    </div>
+  </div>
 </section>
 
 <section class="content-section container resource-panel" aria-labelledby="background-title">
@@ -178,7 +245,7 @@ activeTab: about
     </p>
   </div>
   <div class="resource-links" aria-label="Related resources">
-    <a href="https://onlinelibrary.wiley.com/doi/10.1002/mrm.28391" target="_blank" rel="noopener noreferrer">Read the related publication</a>
+    <a href="https://onlinelibrary.wiley.com/doi/10.1002/mrm.30041" target="_blank" rel="noopener noreferrer">Read the related publication</a>
     <a href="https://challenge.ismrm.org/" target="_blank" rel="noopener noreferrer">Visit the original challenge website</a>
   </div>
 </section>
