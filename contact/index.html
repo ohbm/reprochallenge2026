@@ -61,7 +61,7 @@
   <article class="contact-card">
     <p class="role-label">OSSIG information</p>
     <h2>Visit the Open Science SIG</h2>
-    <p>For broader information about OHBM OSSIG activities, visit the SIG website or repository.</p>
+    <p>If you have any questions or ideas about the Reproducibility Challenge, or for broader information about OHBM OSSIG activities, please visit our website or contact us via Email.</p>
     <div class="resource-links inline-links">
       <a href="https://ossig.netlify.app/" target="_blank" rel="noopener noreferrer">OSSIG Website</a>
       <a href="mailto:ohbmopenscience@gmail.com">Email</a>
@@ -75,8 +75,16 @@
       <div class="container footer-content">
         <p>© 2026 OHBM Open Science SIG</p>
         <div class="footer-links">
-          <a href="https://ossig.netlify.app/" target="_blank" rel="noopener noreferrer">OSSIG Website</a>
-          <a href="https://github.com/ohbm/ossig" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <strong>Contact us</strong>
+          <a href="mailto:ohbmopenscience@gmail.com" aria-label="Email OHBM Open Science SIG">
+            <img src="/reprochallenge2026/assets/images/email-1573-svgrepo-com.svg" alt="" />
+          </a>
+          <a href="https://ossig.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="OSSIG Website">
+            <img src="/reprochallenge2026/assets/images/internet-3-svgrepo-com.svg" alt="" />
+          </a>
+          <a href="https://github.com/ohbm/ossig" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="/reprochallenge2026/assets/images/github-142-svgrepo-com.svg" alt="" />
+          </a>
         </div>
       </div>
     </footer>
@@ -111,6 +119,84 @@
             document.body.classList.remove('menu-open');
           }
         });
+      })();
+    </script>
+    <script>
+      (function() {
+        const chat = document.querySelector('.evaluation-chat');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!chat || prefersReducedMotion) {
+          return;
+        }
+
+        const rows = Array.from(chat.querySelectorAll('.evaluation-chat-row'));
+
+        if (!rows.length) {
+          return;
+        }
+
+        const sleep = function(ms) {
+          return new Promise(function(resolve) {
+            window.setTimeout(resolve, ms);
+          });
+        };
+
+        const typeText = async function(element, text) {
+          element.classList.add('is-typing');
+
+          for (let index = 0; index < text.length; index += 1) {
+            element.textContent += text.charAt(index);
+            await sleep(text.charAt(index) === ' ' ? 10 : 22);
+          }
+
+          element.classList.remove('is-typing');
+        };
+
+        let hasStarted = false;
+
+        const runTypingSequence = async function() {
+          if (hasStarted) {
+            return;
+          }
+
+          hasStarted = true;
+          chat.classList.add('is-typing-active');
+
+          for (const row of rows) {
+            const textBox = row.querySelector('p');
+
+            if (!textBox) {
+              continue;
+            }
+
+            const text = textBox.textContent.trim();
+            textBox.textContent = '';
+            row.classList.add('is-visible');
+            await typeText(textBox, text);
+            await sleep(420);
+          }
+        };
+
+        if (!('IntersectionObserver' in window)) {
+          runTypingSequence();
+          return;
+        }
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              observer.disconnect();
+              runTypingSequence();
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: '0px 0px -18% 0px',
+          threshold: 0.25
+        });
+
+        observer.observe(chat);
       })();
     </script>
   </body>
